@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Warm Ivory / Cream Base */
+  --color-ivory-50: #FCFBF9;
+  --color-ivory-100: #FAF8F5;
+  --color-ivory-200: #F4EFEA;
+  --color-ivory-300: #EAE3D9;
+  --color-ivory-400: #DDD5C8;
+  --color-ivory-500: #C8BCAC;
+
+  /* Deep Plum / Muted Violet */
+  --color-plum-50: #F8F3F9;
+  --color-plum-100: #F0E6F2;
+  --color-plum-200: #DEC8E2;
+  --color-plum-300: #C5A3CB;
+  --color-plum-400: #9B6C9F;
+  --color-plum-500: #6B466E;
+  --color-plum-600: #57355B;
+  --color-plum-700: #4A2E4B;
+  --color-plum-800: #3D223E;
+  --color-plum-900: #2E1630;
+  --color-plum-950: #1D0A1E;
+
+  /* Sage Green */
+  --color-sage-50: #F4F7F5;
+  --color-sage-100: #EAF1EB;
+  --color-sage-200: #D4E3D7;
+  --color-sage-300: #B2CDBD;
+  --color-sage-400: #88B196;
+  --color-sage-500: #5B7B64;
+  --color-sage-600: #486650;
+  --color-sage-700: #3B5342;
+  --color-sage-800: #304336;
+  --color-sage-900: #26362C;
+
+  /* Soft Coral / Peach Accent */
+  --color-coral-50: #FDF6F3;
+  --color-coral-100: #FBEAE4;
+  --color-coral-200: #F7D3C6;
+  --color-coral-300: #F1B4A0;
+  --color-coral-400: #E88C72;
+  --color-coral-500: #D96B50;
+  --color-coral-600: #C65236;
+  --color-coral-700: #A83F27;
+  --color-coral-800: #8A3421;
+  --color-coral-900: #712D1D;
+
+  /* Charcoal / Dark Warm Neutral Text */
+  --color-charcoal-900: #231E1A;
+  --color-charcoal-800: #2E2823;
+  --color-charcoal-700: #3D352E;
+  --color-charcoal-600: #574D43;
+  --color-charcoal-500: #7E7367;
+  --color-charcoal-400: #A2978A;
+  --color-charcoal-300: #C8BEB2;
+}
+
+:root {
+  --bg-main: #FAF8F5;
+  --bg-card: #FFFFFF;
+  --text-main: #2E2823;
+  --text-muted: #7E7367;
+  --accent-plum: #4A2E4B;
+  --accent-sage: #5B7B64;
+  --accent-coral: #D96B50;
+  --border-warm: #EAE3D9;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #2E2823;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Warm card styling */
+.warm-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE3D9;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -4px rgba(46, 40, 35, 0.04), 0 2px 6px -2px rgba(46, 40, 35, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.warm-card:hover {
+  border-color: #DDD5C8;
+  box-shadow: 0 10px 25px -5px rgba(74, 46, 75, 0.07), 0 4px 10px -2px rgba(46, 40, 35, 0.03);
+}
+
+.warm-card-interactive {
+  background-color: #FFFFFF;
+  border: 1px solid #EAE3D9;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 12px -2px rgba(46, 40, 35, 0.04);
+  transition: all 0.2s ease-out;
+}
+
+.warm-card-interactive:hover {
+  transform: translateY(-2px);
+  border-color: #C5A3CB;
+  box-shadow: 0 12px 28px -6px rgba(74, 46, 75, 0.1);
+}
+
+/* Plum button */
+.btn-plum {
+  background-color: #4A2E4B;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(74, 46, 75, 0.25);
+}
+
+.btn-plum:hover {
+  background-color: #3B2238;
+  box-shadow: 0 6px 20px 0 rgba(74, 46, 75, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Coral action button */
+.btn-coral {
+  background-color: #D96B50;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(217, 107, 80, 0.25);
+}
+
+.btn-coral:hover {
+  background-color: #C65236;
+  box-shadow: 0 6px 20px 0 rgba(217, 107, 80, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Sage button */
+.btn-sage {
+  background-color: #5B7B64;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btn-sage:hover {
+  background-color: #486650;
+  transform: translateY(-1px);
+}
+
+/* Soft warm scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD5C8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B2CDBD;
+}
